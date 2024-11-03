@@ -3,20 +3,26 @@ import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
     const links = (
         <>
-            <li className="hover:text-orange-400">
-                <NavLink to="/">Home</NavLink>
+            <li>
+                <NavLink className={({ isActive }) => `font-bold ${isActive ? 'text-warning' : 'hover:text-warning'}`} to="/">
+                    Home
+                </NavLink>
             </li>
-            <li className="hover:text-orange-400">
-                <NavLink to="/coffees">Coffees</NavLink>
+            <li>
+                <NavLink className={({ isActive }) => `font-bold ${isActive ? 'text-warning' : 'hover:text-warning'}`} to="/coffees">
+                    Coffees
+                </NavLink>
             </li>
-            <li className="hover:text-orange-400">
-                <NavLink to="/dashboard">Dashboard</NavLink>
+            <li>
+                <NavLink className={({ isActive }) => `font-bold ${isActive ? 'text-warning' : 'hover:text-warning'}`} to="/dashboard">
+                    Dashboard
+                </NavLink>
             </li>
         </>
     );
 
     return (
-        <div className="sticky top-0 bg-white bg-opacity-50 backdrop-blur-md shadow-sm z-10">
+        <div className="sticky top-0 bg-white/30 bg-opacity-50 backdrop-blur-xl shadow-sm z-10">
             <div className="navbar max-w-7xl mx-auto px-3">
                 <div className="navbar-start">
                     <div className="dropdown">
